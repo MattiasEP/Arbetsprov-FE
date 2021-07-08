@@ -1,0 +1,22 @@
+@mixin desktop {
+  @media (min-width: 33.75em) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media only screen and (min-device-width: 20em) and (max-device-width: 30em) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@function space($nr: 1) {
+  @return calc(#{$nr} * var(--base-spacing));
+}
+
+$base-spacing: 10px;
+
+:root {
+  --base-spacing: 10px;
+  --header-height: 100px;
+}

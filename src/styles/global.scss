@@ -1,0 +1,90 @@
+@import './tools';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eee;
+  color: #333;
+  font-size: 2rem;
+  min-width: 320px;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button,
+input[type='submit'],
+input[type='button'] {
+  cursor: pointer;
+  outline: none;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+*:focus-visible {
+  box-shadow: 0 0 3px 3px rgba(0, 103, 244, 0.247);
+}
+
+ul {
+  list-style: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - var(--header-height) * 2);
+
+  @include desktop {
+    height: calc(100vh - var(--header-height));
+  }
+}

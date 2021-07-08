@@ -1,0 +1,79 @@
+@import '../../styles/tools';
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: red;
+  color: #fff;
+  padding: space(3);
+
+  @include desktop {
+    padding: space(3) space(5);
+  }
+
+  &.red {
+    background-color: #f24726;
+  }
+
+  &.yellow {
+    background-color: #fac710;
+  }
+
+  &.blue {
+    background-color: #2d9bf0;
+  }
+
+  &.wet {
+    background-color: #2d9bf0;
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+
+    .temp {
+      font-size: 6.2rem;
+      font-weight: 500;
+    }
+  }
+
+  button {
+    all: unset;
+    position: absolute;
+    top: space(1);
+    right: space(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    margin-right: space(3);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

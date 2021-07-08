@@ -1,0 +1,8 @@
+@import '../../styles/tools';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: space(5);
+}

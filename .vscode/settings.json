@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  // "prettier.disableLanguages": ["css", "scss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  }
+}
